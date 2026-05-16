@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<title>Leon Brownies • Homemade by Leon 🍫</title>
+<link rel="icon" type="image/png" href="img/lb-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  background: #FEF7E8;
+  color: #2E241F;
+  max-width: 500px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding-bottom: 170px;
+  position: relative;
+}
+
+/* modern glassmorphic elements */
+:root {
+  --brown-dark: #3B2313;
+  --brown-rich: #5C371C;
+  --caramel: #C27E4A;
+  --cream-puff: #FFF3E4;
+  --golden: #E6A157;
+  --matcha-soft: #90A955;
+  --red-velvet: #C4495C;
+  --white-soft: #FFF9F2;
+  --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
+  --shadow-md: 0 20px 30px -12px rgba(59, 35, 19, 0.12);
+  --radius-card: 28px;
+}
+
+/* animated background */
+.hdr {
+  background: linear-gradient(135deg, #412915 0%, #6A3E22 55%, #8B532E 100%);
+  padding: 2rem 1.8rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.hdr::before {
+  content: "🍫";
+  font-size: 110px;
+  position: absolute;
+  bottom: -25px;
+  right: -25px;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.hdr-icon {
+  font-size: 3.2rem;
+  display: inline-block;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+}
+
+.hdr h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: -0.5px;
+  color: #FFF3E4;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hdr-sub {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #FFE3CD;
+  margin-top: 0.3rem;
+}
+
+.hdr-badge {
+  background: rgba(255,215,175,0.2);
+  backdrop-filter: blur(4px);
+  display: inline-block;
+  margin-top: 0.9rem;
+  padding: 0.3rem 1rem;
+  border-radius: 60px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #FFE1C2;
+  border: 1px solid rgba(255,215,175,0.4);
+}
+
+/* about card premium */
+.about-box {
+  background: #FFFFFFCC;
+  backdrop-filter: blur(2px);
+  margin: 1rem 1rem 0.5rem;
+  border-radius: 28px;
+  padding: 1.2rem 1.3rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(194,126,74,0.2);
+}
+
+.about-box h3 {
+  font-weight: 800;
+  color: #5C371C;
+  font-size: 1rem;
+  display: flex;
+  gap: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.about-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6F4E2E;
+}
+
+.sec-title {
+  font-weight: 800;
+  font-size: 1.35rem;
+  padding: 1.2rem 1.2rem 0.4rem;
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #412915;
+}
+
+/* product card premium */
+.p-card {
+  background: white;
+  margin: 0.7rem 1rem;
+  border-radius: 28px;
+  padding: 1rem 1.2rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.p-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.p-top {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+
+.p-info {
+  flex: 1;
+}
+
+.p-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 0.2rem 0.7rem;
+  border-radius: 30px;
+  background: #F8EBDD;
+  color: #AA6F3C;
+  margin-bottom: 0.5rem;
+}
+
+.p-name {
+  font-weight: 800;
+  font-size: 1rem;
+  color: #2E241F;
+  letter-spacing: -0.2px;
+}
+
+.p-desc {
+  font-size: 0.73rem;
+  color: #9B7C60;
+  margin: 0.3rem 0 0.5rem;
+  line-height: 1.4;
+}
+
+.p-price {
+  font-weight: 800;
+  font-size: 1rem;
+  color: #C27E4A;
+}
+
+/* ── PRODUCT IMAGE + LIGHTBOX ── */
+.p-img-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+.p-img {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 18px;
+  cursor: zoom-in;
+  display: block;
+  transition: transform .22s, box-shadow .22s;
+  box-shadow: 0 4px 14px rgba(0,0,0,.13);
+  border: 2.5px solid rgba(255,255,255,.9);
+}
+.p-img:hover { transform: scale(1.06); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+.p-img:active { transform: scale(.96); }
+.p-img-hint {
+  position: absolute;
+  bottom: 5px; right: 5px;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  font-size: .58rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 8px;
+  pointer-events: none;
+  letter-spacing: .3px;
+}
+
+/* ── LIGHTBOX ── */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(8,3,1,.9);
+  backdrop-filter: blur(12px);
+  z-index: 600;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  cursor: zoom-out;
+}
+.lightbox.open { display: flex; }
+.lb-box {
+  position: relative;
+  max-width: 90vw;
+  animation: lbPop .22s cubic-bezier(.34,1.56,.64,1);
+}
+@keyframes lbPop {
+  from { opacity: 0; transform: scale(.82); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.lb-img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 24px;
+  display: block;
+  box-shadow: 0 20px 60px rgba(0,0,0,.6);
+  transition: opacity .15s;
+}
+.lb-caption {
+  text-align: center;
+  color: rgba(255,243,228,.88);
+  font-size: .82rem;
+  font-weight: 700;
+  margin-top: .9rem;
+  letter-spacing: .3px;
+}
+.lb-close {
+  position: absolute;
+  top: -14px; right: -14px;
+  width: 30px; height: 30px;
+  background: #fff;
+  color: #3B2313;
+  border-radius: 50%;
+  border: none;
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,.3);
+}
+.lb-close:hover { background: #FEF1E4; }
+.lb-nav {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  width: 38px; height: 38px;
+  background: rgba(255,255,255,.15);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .18s;
+  -webkit-tap-highlight-color: transparent;
+}
+.lb-nav:hover { background: rgba(255,255,255,.28); }
+.lb-prev { left: -50px; }
+.lb-next { right: -50px; }
+
+/* qty control modern */
+.qty-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid #F3E5D6;
+}
+
+.q-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 40px;
+  background: #FEF1E4;
+  border: none;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #7A4C2A;
+  cursor: pointer;
+  transition: 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.q-btn:active {
+  transform: scale(0.92);
+  background: #E9DBCB;
+}
+
+.q-num {
+  font-weight: 800;
+  font-size: 1.1rem;
+  min-width: 28px;
+  text-align: center;
+  color: #351F0E;
+}
+
+/* bottom bar */
+.cart-bar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 500px;
+  background: #2F1D10;
+  backdrop-filter: blur(12px);
+  padding: 1rem 1.2rem 1.3rem;
+  box-shadow: 0 -10px 25px rgba(0,0,0,0.2);
+  border-radius: 24px 24px 0 0;
+  z-index: 100;
+}
+
+.cart-sum {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.7rem;
+}
+
+.cart-info {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #FFE1BF;
+}
+
+.cart-total {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #F8C471;
+}
+
+.btn-order {
+  width: 100%;
+  background: #25D366;
+  border: none;
+  border-radius: 40px;
+  padding: 0.85rem;
+  font-weight: 800;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-order:active {
+  transform: scale(0.97);
+}
+
+.btn-order:disabled {
+  background: #8F8F8F;
+  opacity: 0.6;
+  transform: none;
+}
+
+/* refund section */
+.refund-sec {
+  background: #FFF3E4;
+  margin: 1rem 1rem;
+  border-radius: 28px;
+  padding: 1rem 1rem;
+  text-align: center;
+  border: 1px solid #FFDEC2;
+}
+
+.refund-sec p {
+  font-size: 0.75rem;
+  color: #825A38;
+}
+
+.btn-refund {
+  background: transparent;
+  border: 1.5px solid #CD5C5C;
+  border-radius: 60px;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  color: #CD5C5C;
+  font-size: 0.7rem;
+  margin-top: 0.6rem;
+  cursor: pointer;
+}
+
+/* MODAL ENHANCED */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  z-index: 200;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.overlay.open {
+  display: flex;
+}
+
+.modal {
+  background: #FFFCF7;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 32px 32px 0 0;
+  padding: 1.4rem 1.3rem 2rem;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.m-handle {
+  width: 45px;
+  height: 5px;
+  background: #DDC7B2;
+  border-radius: 20px;
+  margin: 0 auto 1rem;
+}
+
+.finput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 20px;
+  border: 1.5px solid #F0E2D4;
+  background: #FFFFFF;
+  font-family: inherit;
+}
+
+.finput:focus {
+  border-color: #C27E4A;
+  outline: none;
+}
+
+.toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.tbtn {
+  flex: 1;
+  background: #F5EEE6;
+  border: none;
+  border-radius: 50px;
+  padding: 0.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.tbtn.on {
+  background: #7A4C2A;
+  color: white;
+}
+
+.oi-box {
+  background: #FEF4EA;
+  border-radius: 24px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-wa {
+  background: #25D366;
+  width: 100%;
+  border: none;
+  border-radius: 40px;
+  padding: 0.9rem;
+  font-weight: 800;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* delivery toggle row */
+.delivery-group {
+  background: #FFF3E4;
+  border-radius: 20px;
+  padding: 0.8rem;
+  margin: 0.8rem 0 0.5rem;
+}
+
+.delivery-label {
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+  color: #A16635;
+}
+
+/* toast */
+.toast {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-70px);
+  background: #2A1B0F;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 60px;
+  font-size: 0.75rem;
+  z-index: 999;
+  transition: 0.25s;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+.footer {
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.7rem;
+  color: #B49476;
+}
+
+.tnc-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 0.7rem;
+}
+.tnc-num {
+  width: 22px;
+  height: 22px;
+  background: #C4495C;
+  border-radius: 30px;
+  color: white;
+  font-size: 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.btn-agree {
+  background: #C4495C;
+  width: 100%;
+  border: none;
+  border-radius: 40px;
+  padding: 0.9rem;
+  font-weight: 800;
+  color: white;
+  margin-top: 1rem;
+}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <span class="hdr-icon">🍫🧀</span>
+  <h1>Leon Brownies</h1>
+  <p class="hdr-sub">Homemade Brownies & soft cookies • Setiap gigitan penuh cinta</p>
+  <div class="hdr-badge">✨ homemade • premium • terjangkau</div>
+</div>
+
+<div class="about-box">
+  <h3><i class="fas fa-cookie-bite" style="color:#C27E4A"></i> Tentang Leon Brownies</h3>
+  <p>Bahan premium, rasa otentik, dan proses homemade yang berkualitas penuh cinta. Cheese Brownies yang Cheesey and Fudgy dan Soft Cookies yang rasanya melt in your mouth!</p>
+  <div class="about-row"><span>📦</span><span>Pickup UNJ / delivery area sekitar</span></div>
+  <div class="about-row"><span>⏱️</span><span>Order via WA | custom pesanan siap</span></div>
+</div>
+
+<!-- CHEESE BROWNIES only 1 variant -->
+<div class="sec-title"><span>🧀</span> Cheese Brownies</div>
+
+<div class="p-card">
+  <div class="p-top">
+    <div class="p-info">
+      <span class="p-badge">🌿 Best Seller</span>
+      <div class="p-name">Cheese Brownies</div>
+      <div class="p-desc">Brownies coklat yang fudgy saat digigit dengan topping cream cheese. Tanpa rasa lain, classic banget!</div>
+      <div class="p-price">Rp 5.000 / pcs</div>
+    </div>
+    <div class="p-img-wrap"><img class="p-img" src="img/cb-ori.png" alt="Cheese Brownies" onclick="openLB(0)" loading="lazy"><div class="p-img-hint">🔍 zoom</div>
+    </div>
+  </div>
+  <div class="qty-row">
+    <button class="q-btn" onclick="chgQty('cb-ori',-1)">−</button>
+    <span class="q-num" id="q-cb-ori">0</span>
+    <button class="q-btn" onclick="chgQty('cb-ori',1)">+</button>
+  </div>
+</div>
+
+<div class="p-card">
+  <div class="p-top">
+    <div class="p-info">
+      <span class="p-badge">🎉 Spesial Loyang</span>
+      <div class="p-name">Brownies 1 Loyang 20×20</div>
+      <div class="p-desc">Setara 16 pcs ukuran biasa. Cocok untuk hadiah, arisan, atau acara! Loyang brownies utuh siap potong.</div>
+      <div class="p-price">Rp 80.000 / loyang</div>
+    </div>
+    <div class="p-img-wrap">
+      <img class="p-img" src="img/cb-loyang.png" alt="Brownies 1 Loyang 20×20" onclick="openLB(1)" loading="lazy">
+      <div class="p-img-hint">🔍 zoom</div>
+    </div>
+  </div>
+  <div class="qty-row">
+    <button class="q-btn" onclick="chgQty('cb-loyang',-1)">−</button>
+    <span class="q-num" id="q-cb-loyang">0</span>
+    <button class="q-btn" onclick="chgQty('cb-loyang',1)">+</button>
+  </div>
+</div>
+
+<div class="divider" style="height:8px;"></div>
+
+<!-- SOFT COOKIES 3 variants harga 6k -->
+<div class="sec-title"><span>🍪</span> Soft Cookies (6k)</div>
+
+<div class="p-card">
+  <div class="p-top">
+    <div class="p-info">
+      <span class="p-badge">Original</span>
+      <div class="p-name">Soft Cookies Original</div>
+      <div class="p-desc">Choco chips melimpah, tekstur chewy & lumer di mulut.</div>
+      <div class="p-price">Rp 6.000 / box</div>
+    </div>
+    <div class="p-img-wrap">
+      <img class="p-img" src="img/ck-ori.png" alt="Soft Cookies Original" onclick="openLB(2)" loading="lazy">
+      <div class="p-img-hint">🔍 zoom</div>
+    </div>
+  </div>
+  <div class="qty-row">
+    <button class="q-btn" onclick="chgQty('ck-ori',-1)">−</button>
+    <span class="q-num" id="q-ck-ori">0</span>
+    <button class="q-btn" onclick="chgQty('ck-ori',1)">+</button>
+  </div>
+</div>
+
+<div class="p-card">
+  <div class="p-top">
+    <div class="p-info">
+      <span class="p-badge">Matcha</span>
+      <div class="p-name">Soft Cookies Matcha</div>
+      <div class="p-desc">Matcha wangi & white chocolate chips, rasa unik.</div>
+      <div class="p-price">Rp 6.000 / box</div>
+    </div>
+    <div class="p-img-wrap">
+      <img class="p-img" src="img/ck-mat.png" alt="Soft Cookies Matcha" onclick="openLB(3)" loading="lazy">
+      <div class="p-img-hint">🔍 zoom</div>
+    </div>
+  </div>
+  <div class="qty-row">
+    <button class="q-btn" onclick="chgQty('ck-mat',-1)">−</button>
+    <span class="q-num" id="q-ck-mat">0</span>
+    <button class="q-btn" onclick="chgQty('ck-mat',1)">+</button>
+  </div>
+</div>
+
+<div class="p-card">
+  <div class="p-top">
+    <div class="p-info">
+      <span class="p-badge">Red Velvet</span>
+      <div class="p-name">Soft Cookies Red Velvet</div>
+      <div class="p-desc">Manis, sedikit tangy dengan sensasi cream cheese.</div>
+      <div class="p-price">Rp 6.000 / box</div>
+    </div>
+    <div class="p-img-wrap">
+      <img class="p-img" src="img/ck-rv.png" alt="Soft Cookies Red Velvet" onclick="openLB(4)" loading="lazy">
+      <div class="p-img-hint">🔍 zoom</div>
+    </div>
+  </div>
+  <div class="qty-row">
+    <button class="q-btn" onclick="chgQty('ck-rv',-1)">−</button>
+    <span class="q-num" id="q-ck-rv">0</span>
+    <button class="q-btn" onclick="chgQty('ck-rv',1)">+</button>
+  </div>
+</div>
+
+<div class="refund-sec">
+  <p>😟 <strong>Ada keluhan? Tidak enak / rusak?</strong><br>Kami bertanggung jawab ❤️</p>
+  <button class="btn-refund" onclick="openTnc()">⚠️ Ajukan Refund / Komplain via WA</button>
+</div>
+
+<div class="footer">
+  © 2025 Leon Brownies • Homemade with ♡<br>
+  <a href="https://instagram.com/leon.brownies" target="_blank"
+     style="color:#C27E4A; text-decoration:none;">
+    📸 @leon.brownies
+  </a>
+</div>
+
+<!-- FLOATING CART -->
+<div class="cart-bar">
+  <div class="cart-sum">
+    <div class="cart-info" id="cart-info">Pilih menu di atas 👆</div>
+    <div class="cart-total" id="cart-total"></div>
+  </div>
+  <button class="btn-order" id="btn-order" onclick="openOrderModal()" disabled>🛒 Pesan Sekarang via WA</button>
+</div>
+
+<!-- ORDER MODAL -->
+<div class="overlay" id="mod-order">
+<div class="modal">
+  <div class="m-handle"></div>
+  <div class="m-title" style="font-weight:800;">🍫 Detail Pesanan</div>
+  <div class="oi-box" id="mod-items"></div>
+
+  <div class="fg">
+    <label class="flabel">Nama Lengkap *</label>
+    <input type="text" class="finput" id="inp-name" placeholder="Nama kamu...">
+  </div>
+
+  <div class="fg">
+    <label class="flabel">Tipe Pelanggan *</label>
+    <div class="toggle">
+      <button class="tbtn on" id="tbtn-unj" onclick="setType('unj')">🎓 Mahasiswa UNJ</button>
+      <button class="tbtn" id="tbtn-umum" onclick="setType('umum')">👤 Umum</button>
+    </div>
+  </div>
+
+  <!-- UNJ Fields -->
+  <div id="unj-f">
+    <div class="fg">
+      <label class="flabel">Program Studi *</label>
+      <input type="text" class="finput" id="inp-prodi" placeholder="Contoh: Pendidikan Bahasa Inggris">
+    </div>
+    <div class="fg">
+      <label class="flabel">Fakultas *</label>
+      <input type="text" class="finput" id="inp-fak" placeholder="Contoh: FIP">
+    </div>
+
+    <!-- OPSI ANTAR / PICKUP UNJ -->
+    <div class="delivery-group" id="delivery-opt-group">
+      <span class="delivery-label"><i class="fas fa-truck"></i> Metode pengambilan UNJ</span>
+      <div class="toggle" id="deliveryToggle">
+        <button class="tbtn" id="delivery-pickup" onclick="setDelivery('pickup')">📍 Ambil Sendiri (Pickup)</button>
+        <button class="tbtn" id="delivery-antar" onclick="setDelivery('antar')">🚚 Antar + Rp3.000</button>
+      </div>
+      <div style="font-size:0.7rem; margin-top:6px; color:#B27D53;">*Biaya antar hanya untuk area sekitar UNJ (charge 3k)</div>
+    </div>
+  </div>
+
+  <!-- Umum Fields -->
+  <div id="umum-f" style="display:none;">
+    <div class="fg">
+      <label class="flabel">Domisili *</label>
+      <input type="text" class="finput" id="inp-dom" placeholder="contoh: Jakarta Timur">
+      <div class="ongkir-note" style="background:#FFF1E0; border-radius:14px; padding:8px; margin-top:8px; font-size:0.7rem;">
+        📦 Ongkir belum termasuk — akan dikonfirmasi admin via WA.
+      </div>
+    </div>
+  </div>
+
+  <div class="fg">
+    <label class="flabel">Metode Bayar *</label>
+    <div class="toggle">
+      <button class="tbtn on" id="pbtn-qris" onclick="setPay('qris')">📱 QRIS</button>
+      <button class="tbtn" id="pbtn-cash" onclick="setPay('cash')">💵 Cash</button>
+    </div>
+  </div>
+
+  <button class="btn-wa" onclick="sendWAOrder()"><i class="fab fa-whatsapp"></i> Kirim Pesanan via WA</button>
+  <button class="btn-cancel" style="margin-top:10px; background:transparent; border:none; color:#A87A55;" onclick="closeM('mod-order')">Batal</button>
+</div>
+</div>
+
+<!-- TNC MODAL for refund -->
+<div class="overlay" id="mod-tnc">
+<div class="modal">
+  <div class="m-handle"></div>
+  <div class="m-title" style="color:#B54646;">⚠️ Syarat refund</div>
+  <div class="tnc-item"><div class="tnc-num">1</div><div class="tnc-txt">Maksimal 24 jam setelah produk diterima</div></div>
+  <div class="tnc-item"><div class="tnc-num">2</div><div class="tnc-txt">Sertakan foto/video bukti kerusakan/ketidaksesuaian</div></div>
+  <div class="tnc-item"><div class="tnc-num">3</div><div class="tnc-txt">Minimal 50% produk belum dikonsumsi</div></div>
+  <div class="tnc-item"><div class="tnc-num">4</div><div class="tnc-txt">Refund bentuk produk/voucher (kecuali kesepakatan khusus)</div></div>
+  <button class="btn-agree" onclick="sendRefundWA()">✅ Ajukan Keluhan via WA</button>
+  <button class="btn-cancel" onclick="closeM('mod-tnc')">Kembali</button>
+</div>
+</div>
+
+<!-- ═══ LIGHTBOX ═══ -->
+<div class="lightbox" id="lightbox" onclick="lbBgClose(event)">
+  <div class="lb-box">
+    <button class="lb-close" onclick="closeLB()" aria-label="Tutup">✕</button>
+    <button class="lb-nav lb-prev" onclick="navLB(-1,event)" aria-label="Sebelumnya">‹</button>
+    <button class="lb-nav lb-next" onclick="navLB(1,event)"  aria-label="Berikutnya">›</button>
+    <img class="lb-img" id="lb-img" src="" alt="">
+    <div class="lb-caption" id="lb-cap"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── LIGHTBOX ────────────────────────────────────────
+const LB = [
+  { src:'img/cb-ori.png',    cap:'🧀🍫 Cheese Brownies' },
+  { src:'img/cb-loyang.png', cap:'🍫🎁 Brownies 1 Loyang' },
+  { src:'img/ck-ori.png',    cap:'🍪 Soft Cookies Original' },
+  { src:'img/ck-mat.png',    cap:'🍵 Soft Cookies Matcha' },
+  { src:'img/ck-rv.png',     cap:'❤️ Soft Cookies Red Velvet' },
+];
+let lbIdx = 0;
+
+function openLB(i) {
+  lbIdx = i;
+  const img = document.getElementById('lb-img');
+  img.src = LB[i].src;
+  img.style.opacity = '1';
+  document.getElementById('lb-cap').textContent = LB[i].cap;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+} 
+function closeLB() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function lbBgClose(e) {
+  if (e.target === document.getElementById('lightbox')) closeLB();
+}
+function navLB(dir, e) {
+  if (e) e.stopPropagation();
+  lbIdx = (lbIdx + dir + LB.length) % LB.length;
+  const img = document.getElementById('lb-img');
+  img.style.opacity = '0';
+  setTimeout(() => {
+    img.src = LB[lbIdx].src;
+    document.getElementById('lb-cap').textContent = LB[lbIdx].cap;
+    img.style.opacity = '1';
+  }, 140);
+}
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lightbox').classList.contains('open')) return;
+  if (e.key === 'Escape')      closeLB();
+  if (e.key === 'ArrowLeft')   navLB(-1, null);
+  if (e.key === 'ArrowRight')  navLB(1, null);
+});
+// ────────────────────────────────────────────────────
+
+// PRODUK & HARGA baru: Cheese Brownies 5k + Soft Cookies 6k
+const PROD = {
+  'cb-ori'   : { name: '\uD83E\uDDC0 Cheese Brownies Signature', price: 5000 },
+  'cb-loyang': { name: '\uD83C\uDF70 Brownies 1 Loyang 20\u00D720cm', price: 80000 },
+  'ck-ori'   : { name: '\uD83C\uDF6A Soft Cookies Original', price: 6000 },
+  'ck-mat'   : { name: '\uD83C\uDF75 Soft Cookies Matcha', price: 6000 },
+  'ck-rv'    : { name: '\u2764\uFE0F Soft Cookies Red Velvet', price: 6000 }
+};
+
+let qty = {
+  'cb-ori': 0,
+  'cb-loyang': 0,
+  'ck-ori': 0,
+  'ck-mat': 0,
+  'ck-rv': 0
+};
+
+let ctype = 'unj';      // 'unj' or 'umum'
+let pay = 'qris';
+let deliveryMethod = 'pickup';   // 'pickup' or 'antar' (hanya untuk unj)
+let deliveryFee = 0;
+
+// DOM helpers
+function getDeliveryFeeValue() {
+  if (ctype === 'unj' && deliveryMethod === 'antar') return 3000;
+  return 0;
+}
+
+function chgQty(id, delta) {
+  let newVal = qty[id] + delta;
+  if (newVal < 0) newVal = 0;
+  qty[id] = newVal;
+  document.getElementById(`q-${id}`).innerText = qty[id];
+  updateCartTotalBar();
+  // jika modal order sedang terbuka, refresh ringkasan
+  const modalOpen = document.getElementById('mod-order').classList.contains('open');
+  if (modalOpen) {
+    refreshModalSummary();
+  }
+}
+
+function updateCartTotalBar() {
+  const totalItems = Object.values(qty).reduce((a,b)=>a+b,0);
+  const totalPrice = Object.keys(qty).reduce((s,k)=> s + (qty[k] * PROD[k].price), 0);
+  const cartInfo = document.getElementById('cart-info');
+  const cartTotalSpan = document.getElementById('cart-total');
+  const orderBtn = document.getElementById('btn-order');
+  if (totalItems === 0) {
+    cartInfo.innerText = 'Pilih menu di atas 👆';
+    cartTotalSpan.innerText = '';
+    orderBtn.disabled = true;
+  } else {
+    cartInfo.innerText = `${totalItems} item dipilih`;
+    cartTotalSpan.innerText = `Rp ${totalPrice.toLocaleString('id-ID')}`;
+    orderBtn.disabled = false;
+  }
+}
+
+function setType(type) {
+  ctype = type;
+  document.getElementById('tbtn-unj').className = 'tbtn' + (type === 'unj' ? ' on' : '');
+  document.getElementById('tbtn-umum').className = 'tbtn' + (type === 'umum' ? ' on' : '');
+  const unjDiv = document.getElementById('unj-f');
+  const umumDiv = document.getElementById('umum-f');
+  if (type === 'unj') {
+    unjDiv.style.display = 'block';
+    umumDiv.style.display = 'none';
+    // reset delivery antar default ke pickup
+    if (deliveryMethod !== 'pickup') deliveryMethod = 'pickup';
+    updateDeliveryButtonsUI();
+  } else {
+    unjDiv.style.display = 'none';
+    umumDiv.style.display = 'block';
+    deliveryMethod = 'pickup'; // reset karena umum ga pake antar charge
+  }
+  deliveryFee = getDeliveryFeeValue();
+  if (document.getElementById('mod-order').classList.contains('open')) refreshModalSummary();
+}
+
+function setDelivery(method) {
+  if (ctype !== 'unj') return;
+  deliveryMethod = method;
+  updateDeliveryButtonsUI();
+  deliveryFee = getDeliveryFeeValue();
+  if (document.getElementById('mod-order').classList.contains('open')) refreshModalSummary();
+}
+
+function updateDeliveryButtonsUI() {
+  const pickupBtn = document.getElementById('delivery-pickup');
+  const antarBtn = document.getElementById('delivery-antar');
+  if (pickupBtn && antarBtn) {
+    if (deliveryMethod === 'pickup') {
+      pickupBtn.classList.add('on');
+      antarBtn.classList.remove('on');
+    } else {
+      antarBtn.classList.add('on');
+      pickupBtn.classList.remove('on');
+    }
+  }
+}
+
+function setPay(payment) {
+  pay = payment;
+  document.getElementById('pbtn-qris').className = 'tbtn' + (payment === 'qris' ? ' on' : '');
+  document.getElementById('pbtn-cash').className = 'tbtn' + (payment === 'cash' ? ' on' : '');
+}
+
+function getSubtotal() {
+  return Object.keys(qty).reduce((sum,k) => sum + qty[k] * PROD[k].price, 0);
+}
+
+function refreshModalSummary() {
+  const container = document.getElementById('mod-items');
+  if (!container) return;
+  let subtotal = getSubtotal();
+  let fee = (ctype === 'unj' && deliveryMethod === 'antar') ? 3000 : 0;
+  let totalAmount = subtotal + fee;
+
+  let itemsHtml = '';
+  for (let [id, val] of Object.entries(qty)) {
+    if (val > 0) {
+      itemsHtml += `<div class="oi" style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                      <span>${PROD[id].name} ×${val}</span>
+                      <span style="font-weight:700;">Rp ${(val * PROD[id].price).toLocaleString('id-ID')}</span>
+                    </div>`;
+    }
+  }
+  if (fee > 0) {
+    itemsHtml += `<div style="display:flex; justify-content:space-between; margin: 6px 0; color:#AD7A4A;"><span>🚚 Biaya Antar (UNJ)</span><span>Rp ${fee.toLocaleString('id-ID')}</span></div>`;
+  }
+  itemsHtml += `<div style="display:flex; justify-content:space-between; margin-top: 10px; padding-top:8px; border-top:1px solid #EADBCF; font-weight:800;">
+                  <span>Total Pesanan</span><span>Rp ${totalAmount.toLocaleString('id-ID')}</span>
+                </div>`;
+  container.innerHTML = itemsHtml;
+}
+
+function openOrderModal() {
+  const totalItems = Object.values(qty).reduce((a,b)=>a+b,0);
+  if (totalItems === 0) {
+    toastMsg('🌟 Pilih dulu brownies atau cookies-nya ya!');
+    return;
+  }
+  // reset delivery Fee UI di UNJ
+  if (ctype === 'unj') {
+    updateDeliveryButtonsUI();
+  }
+  deliveryFee = getDeliveryFeeValue();
+  refreshModalSummary();
+  document.getElementById('mod-order').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeM(id) {
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function toastMsg(msg) {
+  const t = document.getElementById('toast');
+  t.innerText = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+function sendWAOrder() {
+  const name = document.getElementById('inp-name').value.trim();
+  if (!name) { toastMsg('⚠️ Nama wajib diisi!'); return; }
+
+  let extra = '';
+  let deliveryChargeApplied = 0;
+  let finalDeliveryFee = 0;
+  let orderTypeDesc = '';
+
+  if (ctype === 'unj') {
+    const prodi = document.getElementById('inp-prodi').value.trim();
+    const fak = document.getElementById('inp-fak').value.trim();
+    if (!prodi || !fak) { toastMsg('⚠️ Prodi & Fakultas wajib diisi (UNJ)'); return; }
+    extra = `\uD83C\uDF93 Prodi        : ${prodi}\n\uD83D\uDCDA Fakultas  : ${fak}`;
+    if (deliveryMethod === 'antar') {
+      finalDeliveryFee = 3000;
+      orderTypeDesc = '\uD83D\uDE9A Antar (Delivery) + Rp3.000';
+    } else {
+      orderTypeDesc = '\uD83D\uDCCD Ambil Sendiri (Pickup UNJ)';
+    }
+  } else {
+    const dom = document.getElementById('inp-dom').value.trim();
+    if (!dom) { toastMsg('⚠️ Domisili wajib diisi!'); return; }
+    extra = `\uD83D\uDCCD Domisili   : ${dom}\n\u26A0\uFE0F Catatan   : Ongkir akan dikonfirmasi admin`;
+    orderTypeDesc = 'Umum (ongkir diluar)';
+  }
+
+  let subtotal = getSubtotal();
+  let totalOrder = subtotal + finalDeliveryFee;
+  let itemsList = '';
+  for (let [id, val] of Object.entries(qty)) {
+    if (val > 0) {
+      itemsList += `   • ${PROD[id].name} ×${val} = Rp ${(val * PROD[id].price).toLocaleString('id-ID')}\n`;
+    }
+  }
+
+  let deliveryLine = '';
+  if (ctype === 'unj' && finalDeliveryFee > 0) {
+    deliveryLine = `\n\uD83D\uDE9A Biaya Antar UNJ : Rp ${finalDeliveryFee.toLocaleString('id-ID')}`;
+  } else if (ctype === 'unj' && deliveryMethod === 'pickup') {
+    deliveryLine = `\n\uD83D\uDCCD Metode : Ambil Sendiri (Gratis antar)`;
+  } else {
+    deliveryLine = `\n\uD83D\uDCE6 Ongkir : dikonfirmasi admin terpisah`;
+  }
+
+  const paymentLabel = pay === 'qris' ? '\uD83D\uDCF1 QRIS' : '\uD83D\uDCB5 Cash (Bayar di tempat)';
+  const pelangganLabel = ctype === 'unj' ? 'Mahasiswa UNJ \uD83C\uDF93' : 'Umum \uD83D\uDC64';
+
+  const finalMessage = 
+`\uD83C\uDF6B *LEON BROWNIES - PESANAN* \uD83C\uDF6B
+\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
+\uD83D\uDC64 Nama       : ${name}
+\uD83C\uDFF7\uFE0F Tipe          : ${pelangganLabel}
+${extra}
+\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
+\uD83D\uDCE6 *Detail Pesanan:*
+${itemsList}
+\uD83D\uDCB0 *Subtotal             : Rp ${subtotal.toLocaleString('id-ID')}*${deliveryLine}
+\u2728 *Total Akhir         : Rp ${totalOrder.toLocaleString('id-ID')}*
+\uD83D\uDCB3 Pembayaran        : ${paymentLabel}
+\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501
+Terima kasih sudah memesan di Leon Brownies! \uD83D\uDE4F
+Konfirmasi alamat & jadwal pickup/delivery ya kak.`;
+
+  const WA_NUMBER = '6283879613446'; // GANTI DENGAN NOMOR WA ASLI PENJUAL
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(finalMessage)}`, '_blank');
+  closeM('mod-order');
+}
+
+function openTnc() {
+  document.getElementById('mod-tnc').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function sendRefundWA() {
+  const refundMsg = `😟 *PENGAJUAN KELUHAN / REFUND - LEON BROWNIES*
+Halo admin, saya ingin mengajukan keluhan sesuai syarat & ketentuan yang berlaku.
+📋 Detail
+- Nama              : 
+- Produk bermasalah :
+- Deskripsi keluhan :
+📸 (Sertakan foto/video bukti)
+
+Saya telah membaca dan menyetujui syarat refund maksimal 24 jam. Terima kasih.`;
+  const WA_NUMBER = '6283879613446';
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(refundMsg)}`, '_blank');
+  closeM('mod-tnc');
+}
+
+document.querySelectorAll('.overlay').forEach(el => {
+  el.addEventListener('click', function(e){
+    if(e.target === el) closeM(el.id);
+  });
+});
+
+updateCartTotalBar();
+setType('unj'); // default unj
+setDelivery('pickup');
+updateDeliveryButtonsUI();
+</script>
+</body>
+</html>
